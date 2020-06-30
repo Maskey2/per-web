@@ -16,14 +16,14 @@ export default function App() {
     <Router>
       <ParticleComponent />
       <Switch>
-        <Route  path="/dashboard" component={Dashboard}></Route>
-        <Route  path="/about" component={About}></Route>
-        <Route  path="/skills" component={Skills}></Route>
-        <Route  path="/workhistory" component={Work}></Route>
-        <Route  path="/portfolio" component={Portfolio}></Route>
-        <Route  path="/hobbies" component={Hobbies}></Route>
-        <Route  path="/extra" component={Extra}></Route>
-        <Route  path="/" component={Home}></Route>
+        <Route path="/dashboard" exact component={Dashboard}></Route>
+        <Route path="/about" exact component={About}></Route>
+        <Route path="/skills" exact component={Skills}></Route>
+        <Route path="/workhistory" exact component={Work}></Route>
+        <Route path="/portfolio" exact component={Portfolio}></Route>
+        <Route path="/hobbies" exact component={Hobbies}></Route>
+        <Route path="/extra" exact component={Extra}></Route>
+        <Route path="/" exact component={Home}></Route>
         
       </Switch>
     

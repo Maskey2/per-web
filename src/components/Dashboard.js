@@ -7,7 +7,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import { Link } from "react-router-dom";
 import Flippy, { FrontSide, BackSide } from "react-flippy";
-import {  Box } from "@material-ui/core";
+import { Box } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   boxes: {
@@ -24,7 +24,6 @@ const useStyles = makeStyles((theme) => ({
       width: "150px",
     },
   },
-
   card: {
     height: "100%",
     display: "flex",
@@ -96,11 +95,6 @@ export default function Dashboard() {
   const classes = useStyles();
 
   return (
-    <div style={{
-      backgroundColor: "black",
-      height: "100vh",
-    }}>
-       <Box display={{ xs: "none", sm: "block" }}>
     <div
       style={{
         height: "100vh",
@@ -109,69 +103,23 @@ export default function Dashboard() {
         alignItems: "center",
       }}
     >
-     
-        <Container maxWidth="lg" component="main" id="content">
-          <Grid container spacing={2} alignItems="flex-end">
-            {cards.map((card) => (
-              <Grid item key={card.id} xs={6} md={4} sm={6}>
-                <Flippy
-                  flipOnHover={true} // default false
-                  flipOnClick={false} // default false
-                  flipDirection="horizontal"
-                >
-                  <FrontSide>
-                    <CardContent>
-                      <div
-                        style={{
-                          display: "flex",
-                          justifyContent: "center",
-                        }}
-                      >
-                        <Typography
-                          align="center"
-                          className={classes.boxes}
-                          style={{
-                            backgroundColor: card.color,
-                          }}
-                        >
-                          {card.title}
-                        </Typography>
-                      </div>
-                    </CardContent>
-                  </FrontSide>
-                  <Link to={card.link}>
-                    <BackSide>
-                      <CardMedia
-                        component="img"
-                        alt=""
-                        height="240"
-                        src={card.backsrc}
-                      />
-                    </BackSide>
-                  </Link>
-                </Flippy>
-              </Grid>
-            ))}
-          </Grid>
-        </Container>
-        </div>
-      </Box>
-
-      {/* mobile */}
-      <Box display={{ xs: "block", sm: "none" }}>
-        <Container maxWidth="lg" component="main" id="content">
-          <Grid container spacing={2} alignItems="flex-end">
-            {cards.map((card) => (
-              <Grid item key={card.id} xs={6} md={4} sm={6}>              
+      <Container maxWidth="lg" component="main" id="content">
+        <Grid container spacing={2} alignItems="flex-end">
+          {cards.map((card) => (
+            <Grid item key={card.id} xs={6} md={4} sm={6}>
+              <Flippy
+                flipOnHover={true} // default false
+                flipOnClick={false} // default false
+                flipDirection="horizontal"
+              >
+                <FrontSide>
                   <CardContent>
-                 
                     <div
                       style={{
                         display: "flex",
                         justifyContent: "center",
-                        zIndex:1,
                       }}
-                    >  <Link to={card.link} style={{textDecoration:'none'}}>
+                    >
                       <Typography
                         align="center"
                         className={classes.boxes}
@@ -181,16 +129,24 @@ export default function Dashboard() {
                       >
                         {card.title}
                       </Typography>
-                      </Link>
                     </div>
                   </CardContent>
-                  
-              </Grid>
-            ))}
-          </Grid>
-        </Container>
-      </Box>
+                </FrontSide>
+                <Link to={card.link}>
+                  <BackSide>
+                    <CardMedia
+                      component="img"
+                      alt=""
+                      height="240"
+                      src={card.backsrc}
+                    />
+                  </BackSide>
+                </Link>
+              </Flippy>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
     </div>
-    
   );
 }

@@ -1,12 +1,16 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 import { Container } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import { Link } from "react-router-dom";
 
+const useStyles = makeStyles((theme) => ({
+ 
+}));
 
 export default function Home() {
-
+  const classes = useStyles();
   return (
     <div className="App" style={{ display: "flex", alignItems: "center" }}>
       <Container maxWidth="lg" style={{ flexBasis: "none" }}>
@@ -82,7 +86,7 @@ export default function Home() {
               className="animate__animated animate__wobble  fontd"
               
             >
-              <Link to="/dashboard">
+              <Link to="/dashboard" style={{textDecoration:'none', color:'white'}}>
             Find out!</Link></p>
           </Grid>
         </Grid>
