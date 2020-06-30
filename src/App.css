@@ -1,0 +1,28 @@
+.App {
+  background-color: black;
+  text-align: center;
+  height: 100vh;
+  background-attachment: fixed;
+ 
+}
+.fontd{
+  font-family: 'Dosis', sans-serif;
+  font-size: 40px;
+  margin:'0px'
+}
+.fontd:hover {
+  color:yellow;
+}
+.skill-img {
+  height:200px;
+}
+
+@media only screen and (max-width: 600px) {
+  .fontd{  
+       font-size: 30px;
+  }
+  .skill-img {
+    height:100px;
+}
+}
+
