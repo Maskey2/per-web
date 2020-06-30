@@ -2,8 +2,13 @@
   background-color: black;
   text-align: center;
   height: 100vh;
-  background-attachment: fixed;
- 
+  background-attachment: fixed; 
+}
+h1,h2,h4,h3,h5,p,div,li {
+  font-family: 'Dosis', sans-serif;
+}
+p{
+  font-size: 18px;
 }
 .fontd{
   font-family: 'Dosis', sans-serif;
@@ -14,9 +19,15 @@
   color:yellow;
 }
 .skill-img {
-  height:200px;
+  height:160px;
+ 
 }
 
+.hob-img{
+  max-height:300px;
+  width:auto;
+  margin:10px;
+}
 @media only screen and (max-width: 600px) {
   .fontd{  
        font-size: 30px;
