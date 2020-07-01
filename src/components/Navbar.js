@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
   },
   link:
     { 
-      fontSize: '14px',
+      fontSize: '16px',
       textDecoration: 'none',
       color: 'lightgrey',
       display:'flex',
@@ -89,7 +89,7 @@ function ElevateAppBar(props) {
         <Toolbar >
         <Typography component={'span'}  align="center">     
         <Link
-            to="/dashboard"
+            to="/dashboard" className={classes.link}
             style={{ color: "white", textDecoration: "white" }}
           >
             <Typography  align="center">
@@ -109,10 +109,7 @@ function ElevateAppBar(props) {
             </Link></Typography> 
             <Typography component={'span'}   color="inherit"style={{flexGrow:1}} >
             <Link to="/hobbies" className={classes.link}>hobbies
-            </Link></Typography> 
-            <Typography component={'span'}   color="inherit"style={{flexGrow:1}} >
-            <Link to="/extra" className={classes.link}>extra
-            </Link></Typography>    
+            </Link></Typography>  
       </Toolbar>
       </AppBar>
       </ElevationScroll>    

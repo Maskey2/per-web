@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, Typography, Container } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import ExpansionPanel from "@material-ui/core/ExpansionPanel";
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
@@ -8,7 +8,6 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 const useStyles = makeStyles((theme) => ({
   bultitle: {
-    backgroundColor: "black",
     color: "white",
     fontSize: "26px",
     [theme.breakpoints.down("sm")]: {
@@ -25,10 +24,10 @@ export default function Portfolio() {
   const classes = useStyles();
   return (
     <div>
-      <h1>Graphic and Web Design Projects</h1>
+      <h1  className="animate__animated animate__flipInX">Graphic and Web Design Projects</h1>
       <ExpansionPanel
         defaultExpanded={false}
-        style={{ backgroundColor: "black", margin: "0px", padding: "0px" }}
+        style={{ backgroundColor: "#EF6F6C", margin: "0px", padding: "0px" }}
       >
         <ExpansionPanelSummary
           style={{ height: "15px" }}
@@ -40,7 +39,7 @@ export default function Portfolio() {
             <p className={classes.bultitle}>Web Design Projects</p>
           </Typography>
         </ExpansionPanelSummary>
-        <ExpansionPanelDetails style={{ backgroundColor: "transparent" }}>
+        <ExpansionPanelDetails style={{ backgroundColor: "#fafafa" }}>
         <Grid container spacing={4}>
             <Grid item xs={6} sm={6} md={4} lg={3} align="center">
               <img className="skill-img animate__animated animate__lightSpeedInLeft"  
@@ -72,7 +71,7 @@ export default function Portfolio() {
       <br />
       <ExpansionPanel
         defaultExpanded={false}
-        style={{ backgroundColor: "black", margin: "0px", padding: "0px" }}
+        style={{ backgroundColor: "#c3a9ff", margin: "0px", padding: "0px" }}
       >
         <ExpansionPanelSummary
           style={{ height: "15px" }}
@@ -84,7 +83,7 @@ export default function Portfolio() {
             <p className={classes.bultitle}>Graphic Projects</p>
           </Typography>
         </ExpansionPanelSummary>
-        <ExpansionPanelDetails style={{ backgroundColor: "transparent" }}>
+        <ExpansionPanelDetails style={{ backgroundColor: "#fafafa" }}>
         <Grid container spacing={4}>
             <Grid item xs={6} sm={6} md={4} lg={3} align="center">
               <img className="skill-img animate__animated animate__lightSpeedInLeft"  

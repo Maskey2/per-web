@@ -15,9 +15,11 @@
     "react-flippy": "^0.1.5",
     "react-instagram-embed": "^1.5.0",
     "react-particles-js": "^3.2.1",
+    "react-photo-gallery": "^8.0.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "react-scroll": "^1.7.16"
+    "react-scroll": "^1.7.16",
+    "vertical-timeline-component-for-react": "^1.0.7"
   },
   "scripts": {
     "start": "react-scripts start",

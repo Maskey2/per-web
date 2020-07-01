@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
       },
     },
     footer: {
-      borderTop: `1px solid ${theme.palette.divider}`,     
+          
       paddingTop: theme.spacing(6),
       paddingBottom: theme.spacing(3),
       [theme.breakpoints.up('sm')]: {
@@ -83,27 +83,27 @@ export default function Footer() {
                NM               
               </Typography>
               <ul>    
-              <Link to='/' className={classes.link} onClick={handleClick}><li>Home  </li></Link>   
-              <a href='/#about' className={classes.link}><li>About  </li>  </a>     
-              <a href='/#contact' className={classes.link}><li>Contact  </li> </a>           
+              <Link to='/dashboard' className={classes.link} onClick={handleClick}><li>Dashboard  </li></Link>   
+              <a href='/about' className={classes.link}><li>About  </li>  </a>     
+              <a href='/extra' className={classes.link}><li>Contact  </li> </a>           
               </ul>
             </Grid>  
             <Grid item xs={6} sm={3} md={4} lg={4}>
               <Typography component={'span'} gutterBottom className={classes.headerlink}>                
-               We... 
+               
               </Typography>                 
               <ul>    
-              <Link to='/design&develop' className={classes.link}><li>Jokes  </li></Link>  
-              <Link to='/manufacture' className={classes.link}><li>Quotes </li></Link>
-              <Link to='/distribute' className={classes.link}><li>Contact  </li></Link>
-              <Link to='/ourbrands' className={classes.link}><li>Donate </li></Link>
+              <Link to='/skills' className={classes.link}><li>Skills  </li></Link>  
+              <Link to='/workhistory' className={classes.link}><li>Work History </li></Link>
+              <Link to='/portfolio' className={classes.link}><li>Portfolio  </li></Link>
+              <Link to='/hobbies' className={classes.link}><li>Hobbies </li></Link>
               </ul>              
             </Grid>  
             <Grid item xs={12} sm={6} md={4} lg={4}>
               
                
-               <Typography component="h2" className={classes.headerlink} style={{paddingLeft:'5px', paddingBottom: '5px', fontSize: '22px'}}> C O N T A C T   {" "} M E </Typography>             
-                       
+               <Typography component="h2" className={classes.headerlink} style={{paddingBottom: '5px', fontSize: '22px'}}> C O N T A C T   {" "} M E </Typography>             
+                     <p>maskeynishma@gmail.com</p>  
            
         </Grid>
         </Grid>

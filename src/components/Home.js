@@ -16,10 +16,10 @@ export default function Home() {
       <Container maxWidth="lg" style={{ flexBasis: "none" }}>
         <Grid container spacing={6}>
           <Grid item xs={12} lg={6}>
-            <div className="animate__animated animate__lightSpeedInLeft  fontd"
-            style={{ border:'1px solid white',  cursor:'pointer'}}
+            <div className="animate__animated animate__lightSpeedInLeft  "
+            style={{ border:'1px solid white',  cursor:'pointer', padding:'20px'}}
               onClick = {() => {document.getElementById("who").style.display = "block"; }}>
-            <p
+            <p className="fontd"
               style={{ color: "white" }}              
             >
               Knock Knock  <FiberManualRecordIcon style={{ color:'white', float:'right', verticalAlign:'middle', padding:'20px'}} className="animate__animated animate__wobble animate__delay-1s"/>
@@ -27,7 +27,7 @@ export default function Home() {
            
             
             </div>
-            <p style={{ color: "white" }} className="animate__animated animate__fadeInDown animate__delay-2s ">Click me !</p>
+            {/* <p style={{ color: "white" }} className="animate__animated animate__fadeInDown animate__delay-2s ">Click me !</p> */}
           </Grid>
           <Grid  item
             xs={12}

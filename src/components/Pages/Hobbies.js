@@ -1,10 +1,92 @@
 import React from "react";
 import Navbar from "./../Navbar";
-import InstagramEmbed from "react-instagram-embed";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, Typography, Container } from "@material-ui/core";
+import { Grid, Container } from "@material-ui/core";
+import Gallery from 'react-photo-gallery'
+import Footer from "../Footer";
 
-const useStyles = makeStyles((theme) => ({}));
+const useStyles = makeStyles((theme) => ({
+  hobb: {
+    color: "white",
+    backgroundColor: "black",
+    border: "none",
+    padding: "8px",
+    borderRadius: "10px",
+    width: "50%",
+    fontSize: "18px",
+    fontFamily: "Dosis",
+    cursor: "pointer",
+  },
+}));
+export const photos = [
+  {
+    src: "https://source.unsplash.com/2ShvY8Lf6l0/800x599",
+    width: 4,
+    height: 3
+  },
+  {
+    src: "https://source.unsplash.com/Dm-qxdynoEc/800x799",
+    width: 1,
+    height: 1
+  },
+  {
+    src: "https://source.unsplash.com/qDkso9nvCg0/600x799",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/iecJiKe_RNg/600x799",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/epcsn8Ed8kY/600x799",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/NQSWvyVRIJk/800x599",
+    width: 4,
+    height: 3
+  },
+  {
+    src: "https://source.unsplash.com/zh7GEuORbUw/600x799",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/PpOHJezOalU/800x599",
+    width: 4,
+    height: 3
+  },
+  {
+    src: "https://source.unsplash.com/I1ASdgphUH4/800x599",
+    width: 4,
+    height: 3
+  },
+  {
+    src: "https://source.unsplash.com/XiDA78wAZVw/600x799",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/x8xJpClTvR0/800x599",
+    width: 4,
+    height: 3
+  },
+  {
+    src: "https://source.unsplash.com/qGQNmBE7mYw/800x599",
+    width: 4,
+    height: 3
+  },
+  {
+    src: "https://source.unsplash.com/NuO6iTBkHxE/800x599",
+    width: 4,
+    height: 3
+  },
+ 
+];
+
 
 export default function Hobbies() {
   const classes = useStyles();
@@ -12,74 +94,9 @@ export default function Hobbies() {
     <div>
       <Navbar />
       
-      <br/>
-      <Container className={classes.cardGrid} maxWidth="lg">
-      <Grid container spacing={2}>
-          <Grid item xs={12} sm={6} md={6} lg={4} align="center" style={{height:'200px'}}>
-          <h2>Movie & Series</h2>
-          <img src="http://nishmaskey.com.np/img/zip.jpg" alt="Explore" className="hob-img"/>        
-          </Grid>
-          <Grid item xs={12} sm={6} md={6} lg={4} align="center" style={{height:'200px'}}>
-          <h2>Animate</h2>
-          <img src="http://nishmaskey.com.np/img/zip.jpg" alt="Explore" className="hob-img"/>             
-          </Grid>
-          <Grid item xs={12} sm={6} md={6} lg={4} align="center" style={{height:'200px'}}>
-          <h2>Travel</h2>
-          <img src="http://nishmaskey.com.np/img/zip.jpg" alt="Explore" className="hob-img"/>            
-          </Grid>
-        </Grid>
-        </Container>
-        
-        <Container className={classes.cardGrid} maxWidth="lg">
-        <Grid container spacing={2}>        
-          <Grid item xs={12} sm={6} md={6} lg={4} align="center" style={{height:'200px'}}>
-          <h2>Design</h2>
-            <InstagramEmbed
-              url="https://www.instagram.com/p/B_V3zTDFLg1/"
-              maxWidth={320}
-              hideCaption={true}
-              containerTagName="div"
-              protocol=""
-              injectScript
-              onLoading={() => {}}
-              onSuccess={() => {}}
-              onAfterRender={() => {}}
-              onFailure={() => {}}
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} md={6} lg={4} align="center" style={{height:'200px'}}>
-          <h2>Cook</h2>
-            <InstagramEmbed
-              url="https://www.instagram.com/p/B8fulJbhXOa/"
-              maxWidth={320}
-              hideCaption={true}
-              containerTagName="div"
-              protocol=""
-              injectScript
-              onLoading={() => {}}
-              onSuccess={() => {}}
-              onAfterRender={() => {}}
-              onFailure={() => {}}
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} md={6} lg={4} align="center" style={{height:'200px'}}>
-          <h2>Empower</h2>
-            <InstagramEmbed
-              url="https://www.instagram.com/p/B2UQbcCnqHZ/"
-              maxWidth={320}
-              hideCaption={true}
-              containerTagName="div"
-              protocol=""
-              injectScript
-              onLoading={() => {}}
-              onSuccess={() => {}}
-              onAfterRender={() => {}}
-              onFailure={() => {}}
-            />            
-          </Grid>
-          </Grid> 
-          
-      </Container>
+<Gallery photos={photos} />;
+      <br />
+      <Footer/>
     </div>
   );
 }

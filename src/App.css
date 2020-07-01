@@ -12,22 +12,39 @@ p{
 }
 .fontd{
   font-family: 'Dosis', sans-serif;
-  font-size: 40px;
+  font-size: 50px;
   margin:'0px'
 }
 .fontd:hover {
   color:yellow;
 }
 .skill-img {
-  height:160px;
+  height:100px;
  
 }
 
+.hob-button {  
+    padding: 6px;
+    margin:10px;
+    background-color: black;;
+    font-size: 20px;
+    color:white;
+    width:50%;
+    border:none;
+    cursor:pointer;
+    font-family: 'Dosis', sans-serif;
+    border-radius: 5px;
+  }
+.hob-button:hover {
+    transition: all 0.5s ease-in-out 0s;
+    box-shadow: 0 0 10px 0 rgba(148, 144, 144, 0.4);
+  }
 .hob-img{
-  max-height:300px;
+  max-height:200px;
   width:auto;
   margin:10px;
 }
+
 @media only screen and (max-width: 600px) {
   .fontd{  
        font-size: 30px;
