@@ -7,6 +7,10 @@ import Grid from '@material-ui/core/Grid';
 import {  Link } from "react-router-dom";
 import {animateScroll as scroll} from 'react-scroll';
 import { Box } from '@material-ui/core';
+import EmailIcon from '@material-ui/icons/Email';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import FacebookIcon from '@material-ui/icons/Facebook';
 
 function Copyright() {
   return (
@@ -75,7 +79,7 @@ const useStyles = makeStyles(theme => ({
 export default function Footer() {
   const classes = useStyles(); 
   return (
-    <Grid style={{backgroundColor: '#e4e4e4'}}>
+    <Grid style={{backgroundColor: '#e4e4e4', marginTop:'50px'}}>
     <Container maxWidth="lg" component="footer" className={classes.footer} >
         <Grid container spacing={2}>        
             <Grid item xs={6} sm={3} md={4} lg={4} >
@@ -102,8 +106,13 @@ export default function Footer() {
             <Grid item xs={12} sm={6} md={4} lg={4}>
               
                
-               <Typography component="h2" className={classes.headerlink} style={{paddingBottom: '5px', fontSize: '22px'}}> C O N T A C T   {" "} M E </Typography>             
-                     <p>maskeynishma@gmail.com</p>  
+               <Typography component="h2" className={classes.headerlink} style={{paddingBottom: '5px', fontSize: '26px'}}> C O N T A C T   {" "} M E </Typography>             
+                     <p><EmailIcon style={{verticalAlign:'middle'}} fontSize="large"/> maskeynishma@gmail.com</p>  
+                     <div>
+                       <a href="https://www.linkedin.com/in/nishmamaskey/"  target="_blank"  style={{color:'black'}}><LinkedInIcon fontSize="large"/></a>
+                       <a href="https://www.instagram.com/neesmamask"  target="_blank"  style={{color:'black'}}><InstagramIcon fontSize="large" /></a>
+                       <a href="https://www.facebook.com/neesma.mask" target="_blank"  style={{color:'black'}}>  <FacebookIcon fontSize="large"/></a>
+                    </div>
            
         </Grid>
         </Grid>

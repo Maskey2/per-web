@@ -13,8 +13,11 @@ export default function Home() {
   const classes = useStyles();
   return (
     <div className="App" style={{ display: "flex", alignItems: "center" }}>
+       <Link to="/dashboard" style={{color:'grey', textDecoration:'none', textAlign:'center'}}>Skip</Link>
       <Container maxWidth="lg" style={{ flexBasis: "none" }}>
+     
         <Grid container spacing={6}>
+         
           <Grid item xs={12} lg={6}>
             <div className="animate__animated animate__lightSpeedInLeft  "
             style={{ border:'1px solid white',  cursor:'pointer', padding:'20px'}}

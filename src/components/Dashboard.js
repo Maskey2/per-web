@@ -6,7 +6,6 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import { Link } from "react-router-dom";
-import Box from "@material-ui/core/Box";
 import Flippy, { FrontSide, BackSide } from "react-flippy";
 
 const useStyles = makeStyles((theme) => ({
@@ -19,9 +18,9 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "180px",
     [theme.breakpoints.down("sm")]: {
       fontSize: "25px",
-      height: "140px",
+      height: "150px",
       lineHeight: "140px",
-      width: "150px",
+      width: "650px",
     },
   },
   card: {
@@ -101,20 +100,21 @@ export default function Dashboard() {
         backgroundColor: "black",
         display: "flex",
         alignItems: "center",
+        justifyContent:'center',
       }}
     >
-      <Box display={{ xs: "none", sm: "block" }}>
+      {/* <Box display={{ xs: "none", sm: "block" }}> */}
       <Container maxWidth="lg" component="main" id="content">
-        <Grid container spacing={2} alignItems="flex-end">
+        <Grid container spacing={2} justify="center">
           {cards.map((card) => (
-            <Grid item key={card.id} xs={6} md={4} sm={6}>
+            <Grid item key={card.id} xs={6} md={4} sm={6} align="center">
               <Flippy
-                flipOnHover={true} // default false
-                flipOnClick={false} // default false
+                flipOnHover={false} // default false
+                flipOnClick={true} // default false
                 flipDirection="horizontal"
               >
-                <FrontSide>
-                  <CardContent>
+                <FrontSide  style={{padding:'0px'}}>
+                  <CardContent >
                     <div
                       style={{
                         display: "flex",
@@ -134,12 +134,12 @@ export default function Dashboard() {
                   </CardContent>
                 </FrontSide>
                 <Link to={card.link}>
-                  <BackSide>
+                  <BackSide style={{padding:'0px'}}>
                     <CardMedia
                       component="img"
                       alt=""
                       height="240"
-                      src={card.backsrc}
+                      src={card.backsrc}  
                     />
                   </BackSide>
                 </Link>
@@ -148,9 +148,9 @@ export default function Dashboard() {
           ))}
         </Grid>
       </Container>
-      </Box>
+      {/* </Box> */}
       
-      <Box display={{ xs: "block", sm: "none" }}>
+      {/* <Box display={{ xs: "block", sm: "none" }}>
         <Container  maxWidth="md">
         <Grid container spacing={2} alignItems="flex-end">
         {cards.map((card) => (
@@ -170,7 +170,7 @@ export default function Dashboard() {
           ))}
           </Grid>
         </Container>
-      </Box>
+      </Box> */}
     </div>
   );
 }

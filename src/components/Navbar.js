@@ -16,9 +16,16 @@ const useStyles = makeStyles(theme => ({
     },    
   },
   tree:{
+    fontSize: '16px',
+    textDecoration: 'none',
+    color: 'lightgrey',
+    display:'flex',
+    marginBottom:'8px', 
+    justifyContent: 'space-evenly',
     padding: theme.spacing(1),
-    [theme.breakpoints.up('sm')]: {
-      display: 'block'
+    [theme.breakpoints.down('sm')]: {
+      marginBottom:'0px', 
+      
     },
   },
   list : {
@@ -34,7 +41,7 @@ const useStyles = makeStyles(theme => ({
       textDecoration: 'none',
       color: 'lightgrey',
       display:'flex',
-      marginBottom:'10px', 
+      marginBottom:'8px', 
       justifyContent: 'space-evenly',
       [theme.breakpoints.down('sm')]: {
         display:'none',
@@ -89,9 +96,7 @@ function ElevateAppBar(props) {
         <Toolbar >
         <Typography component={'span'}  align="center">     
         <Link
-            to="/dashboard" className={classes.link}
-            style={{ color: "white", textDecoration: "white" }}
-          >
+            to="/dashboard" className={classes.tree}>
             <Typography  align="center">
               <ArrowBackIosIcon style={{ verticalAlign: "middle" }} /> Dashboard
             </Typography>
