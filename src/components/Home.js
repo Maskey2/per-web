@@ -13,7 +13,7 @@ export default function Home() {
   const classes = useStyles();
   return (
     <div className="App" style={{ display: "flex", alignItems: "center" }}>
-       <Link to="/dashboard" style={{color:'grey', textDecoration:'none', textAlign:'center'}}>Skip</Link>
+      
       <Container maxWidth="lg" style={{ flexBasis: "none" }}>
      
         <Grid container spacing={6}>

@@ -141,7 +141,7 @@ export default function Portfolio() {
         </ExpansionPanel>
 <br/>
 <Grid container justify="center" spacing={2}>
-    <Grid item lg={6}>
+    <Grid item lg={6} xs={12}>
     <ExpansionPanel
           defaultExpanded={false}
           style={{ backgroundColor: "#465775", margin: "0px", padding: "0px" }}
@@ -177,7 +177,7 @@ export default function Portfolio() {
           </ExpansionPanelDetails>
         </ExpansionPanel>
     </Grid>
-    <Grid item lg={6}>
+    <Grid item lg={6} xs={12}>
     <ExpansionPanel
           defaultExpanded={false}
           style={{ backgroundColor: "#ffca3a", margin: "0px", padding: "0px" }}
