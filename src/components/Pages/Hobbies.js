@@ -1,102 +1,143 @@
 import React from "react";
-import Navbar from "./../Navbar";
+import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, Container } from "@material-ui/core";
-import Gallery from 'react-photo-gallery'
+import Container from "@material-ui/core/Container";
+import Navbar from "./../Navbar";
 import Footer from "../Footer";
 
 const useStyles = makeStyles((theme) => ({
-  hobb: {
-    color: "white",
-    backgroundColor: "black",
-    border: "none",
-    padding: "8px",
-    borderRadius: "10px",
-    width: "50%",
-    fontSize: "18px",
-    fontFamily: "Dosis",
-    cursor: "pointer",
+  link: {
+    textDecoration:'none',
+    color:'black'
+  },
+  cardGrid: {
+    paddingTop: theme.spacing(8),
+    paddingBottom: theme.spacing(8),
+  },
+  card: {
+    height: "100px",
+    maxWidth: "300px",
+    padding: "15px",
+    margin:'1px', 
+    backgroundColor:'darkgrey'  ,
+   
+  },
+  title: {
+    textAlign: "center",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "16px",
+    },
+  },
+  subtitle: {
+    textAlign: "center",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "14px",
+    },
   },
 }));
-export const photos = [
-  {
-    src: "https://source.unsplash.com/2ShvY8Lf6l0/800x599",
-    width: 4,
-    height: 3
-  },
-  {
-    src: "https://source.unsplash.com/Dm-qxdynoEc/800x799",
-    width: 1,
-    height: 1
-  },
-  {
-    src: "https://source.unsplash.com/qDkso9nvCg0/600x799",
-    width: 3,
-    height: 4
-  },
-  {
-    src: "https://source.unsplash.com/iecJiKe_RNg/600x799",
-    width: 3,
-    height: 4
-  },
-  {
-    src: "https://source.unsplash.com/epcsn8Ed8kY/600x799",
-    width: 3,
-    height: 4
-  },
-  {
-    src: "https://source.unsplash.com/NQSWvyVRIJk/800x599",
-    width: 4,
-    height: 3
-  },
-  {
-    src: "https://source.unsplash.com/zh7GEuORbUw/600x799",
-    width: 3,
-    height: 4
-  },
-  {
-    src: "https://source.unsplash.com/PpOHJezOalU/800x599",
-    width: 4,
-    height: 3
-  },
-  {
-    src: "https://source.unsplash.com/I1ASdgphUH4/800x599",
-    width: 4,
-    height: 3
-  },
-  {
-    src: "https://source.unsplash.com/XiDA78wAZVw/600x799",
-    width: 3,
-    height: 4
-  },
-  {
-    src: "https://source.unsplash.com/x8xJpClTvR0/800x599",
-    width: 4,
-    height: 3
-  },
-  {
-    src: "https://source.unsplash.com/qGQNmBE7mYw/800x599",
-    width: 4,
-    height: 3
-  },
-  {
-    src: "https://source.unsplash.com/NuO6iTBkHxE/800x599",
-    width: 4,
-    height: 3
-  },
- 
-];
-
 
 export default function Hobbies() {
   const classes = useStyles();
+
   return (
-    <div>
+    <React.Fragment>
       <Navbar />
-      
-<Gallery photos={photos} />;
-      <br />
+
+      <Container className={classes.cardGrid} maxWidth="lg">
+        {/* End hero unit */}
+       <h1 align="center">Webpage Design</h1>
+        <Grid container spacing={0} justify="center" style={{margin:'20px 0'}} className="animate__animated animate__fadeIn ">
+          <Grid item xs={6} sm={4} md={3} lg={3}  align="center" >
+            <div className={classes.card}>
+              <div style={{flexBasis:'none'}}>
+              
+            <a href="https://www.wit-selu.com/" target="_blank" className={classes.link}>        
+            <p className={classes.title}>
+              Women in Technology
+            </p><hr/>
+            <p className={classes.subtitle}>President ( Fall 2017 - Spring 2020 )</p></a>
+            </div>
+            </div>
+          </Grid>
+          <Grid item xs={6} sm={4} md={3} lg={3}  align="center">
+            <div className={classes.card}>
+            <div style={{flexBasis:'none'}}>
+            <a href="https://sassybeachwear.onrender.com/" target="_blank" className={classes.link}>
+            <p className={classes.title}>
+              Sassy Beachwear
+            </p><hr/>
+            <p className={classes.subtitle}>Beach Accessories Store</p></a>
+            </div>
+            </div>
+          </Grid>
+          <Grid item xs={6} sm={4} md={3} lg={3}  align="center">
+            <div className={classes.card}>
+            <div style={{flexBasis:'none'}}>
+            <a href="https://bubblethechipoo.netlify.app/" target="_blank" className={classes.link}>
+            <p className={classes.title}>
+            Bubble the Chipoo
+            </p><hr/>
+            <p className={classes.subtitle}>My Friend's Dog website 2019</p></a>
+            </div>
+            </div>
+          </Grid>
+          <Grid item xs={6} sm={4} md={3} lg={3}  align="center">
+            <div className={classes.card}>
+            <div style={{flexBasis:'none'}}>
+            <a href="https://magic8ball2.netlify.app/?" target="_blank" className={classes.link}>
+            
+            <p className={classes.title}>
+              Have some Questions?
+            </p><hr/>
+            <p className={classes.subtitle}>Magic 8 Ball</p></a>
+            </div>
+            </div>
+          </Grid>
+        </Grid>
+
+        <Grid container spacing={0} justify="center" style={{margin:'20px 0'}} className="animate__animated animate__jackInTheBox animate__delay-1s">
+          <Grid item xs={6} sm={4} md={3} lg={3}  align="center" >
+          <h1>Design</h1>
+            <div className={classes.card}>
+              <div style={{flexBasis:'none'}}>             
+            <a href="https://www.instagram.com/letthedesignflow/" target="_blank" className={classes.link}>        
+            <p className={classes.title}>
+             @letthedesignflow
+            </p><hr/>
+            <p className={classes.subtitle}>Instagram</p></a>
+            </div>
+            </div>
+          </Grid>
+          <Grid item xs={6} sm={4} md={3} lg={3}  align="center">
+          <h1>Cooking</h1>
+            <div className={classes.card}>
+            <div style={{flexBasis:'none'}}>
+            <a href="https://www.instagram.com/bae_is_hangry/" target="_blank" className={classes.link}>
+            <p className={classes.title}>
+              @bae_is_hangry
+            </p><hr/>
+            <p className={classes.subtitle}>Instagram</p></a>
+            </div>
+            </div>
+          </Grid>
+          <Grid item xs={6} sm={4} md={3} lg={3}  align="center">
+          <h1>Video Making</h1>
+            <div className={classes.card}>
+            <div style={{flexBasis:'none'}}>
+            <a href="https://www.youtube.com/channel/UCYV-xKUYVk6BXeyUQ347o7Q" target="_blank" className={classes.link}>
+            <p className={classes.title}>
+              Animation, WIT videos
+            </p><hr/>
+            <p className={classes.subtitle}>YouTube</p></a>
+            </div>
+            </div>
+          </Grid>
+          </Grid>
+
+          
+      </Container>
       <Footer/>
-    </div>
+    </React.Fragment>
   );
 }

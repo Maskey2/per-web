@@ -16,7 +16,7 @@ export default function Album() {
   const classes = useStyles();
 
   return (
-    <React.Fragment>
+    <div>
     
       <Navbar/>
    
@@ -107,6 +107,6 @@ export default function Album() {
         </Container>
       </main>
       <Footer/>
-    </React.Fragment>
+    </div>
   );
 }

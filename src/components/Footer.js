@@ -34,6 +34,10 @@ const useStyles = makeStyles(theme => ({
         listStyle: 'none',
       },
     },
+    link:{
+      textDecoration:'none',
+      color:'black',
+    },
     footer: {
           
       paddingTop: theme.spacing(6),
@@ -107,11 +111,12 @@ export default function Footer() {
               
                
                <Typography component="h2" className={classes.headerlink} style={{paddingBottom: '5px', fontSize: '26px'}}> C O N T A C T   {" "} M E </Typography>             
-                     <p><EmailIcon style={{verticalAlign:'middle'}} fontSize="large"/> maskeynishma@gmail.com</p>  
+                     <p><EmailIcon style={{verticalAlign:'middle'}} fontSize="large"/>
+                     <a href = "mailto:maskeynishma@gmail.com" className={classes.link}> maskeynishma@gmail.com</a></p>  
                      <div>
-                       <a href="https://www.linkedin.com/in/nishmamaskey/"  target="_blank"  style={{color:'black'}}><LinkedInIcon fontSize="large"/></a>
-                       <a href="https://www.instagram.com/neesmamask"  target="_blank"  style={{color:'black'}}><InstagramIcon fontSize="large" /></a>
-                       <a href="https://www.facebook.com/neesma.mask" target="_blank"  style={{color:'black'}}>  <FacebookIcon fontSize="large"/></a>
+                       <a href="https://www.linkedin.com/in/nishmamaskey/"  target="_blank"  rel="noopener noreferrer" style={{color:'black'}}><LinkedInIcon fontSize="large"/></a>
+                       <a href="https://www.instagram.com/neesmamask"  target="_blank" rel="noopener noreferrer" style={{color:'black'}}><InstagramIcon fontSize="large" /></a>
+                       <a href="https://www.facebook.com/neesma.mask" target="_blank" rel="noopener noreferrer" style={{color:'black'}}>  <FacebookIcon fontSize="large"/></a>
                     </div>
            
         </Grid>

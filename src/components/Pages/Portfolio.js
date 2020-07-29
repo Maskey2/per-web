@@ -34,7 +34,11 @@ export default function Portfolio() {
   return (
     <div>
       <Navbar />
-      <Container className={classes.cardGrid} maxWidth="md" >
+       <Container className={classes.cardGrid} maxWidth="md" style={{minHeight:'52.5vh'}}>
+
+      <a href="http://portfolio.nishmaskey.com.np/" target="_blank"  rel="noopener noreferrer" style={{padding:'100px'}}>http://portfolio.nishmaskey.com.np/</a>
+        
+        {/*
         <h1 className="animate__animated animate__flipInX">Web Development Projects</h1>
         <ExpansionPanel
           defaultExpanded={false}
@@ -71,7 +75,7 @@ export default function Portfolio() {
         </ExpansionPanel>
         <br/>
        {/* lions feed end */}
-        <ExpansionPanel
+        {/* <ExpansionPanel
           defaultExpanded={false}
           style={{ backgroundColor: "#EB9647", margin: "0px", padding: "0px" }}
         >
@@ -105,8 +109,8 @@ export default function Portfolio() {
             </div>
           </ExpansionPanelDetails>
         </ExpansionPanel>
-<br/> {/* iforgot feed end */}
-<ExpansionPanel
+<br/>  iforgot feed end */}
+{/*<ExpansionPanel
           defaultExpanded={false}
           style={{ backgroundColor: "#8CB26C", margin: "0px", padding: "0px" }}
         >
@@ -212,15 +216,19 @@ export default function Portfolio() {
           </ExpansionPanelDetails>
         </ExpansionPanel>
         </Grid>
-</Grid>
+</Grid> 
 
         <br/>
+        
         <Grid>            
         </Grid>
-        <Graphic/>
+        <Graphic/>  */}
+       
       </Container>
-
+      
       <Footer/>
+
+      
     </div>
   );
 }
